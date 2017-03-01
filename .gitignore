@@ -1,0 +1,11 @@
+
+
+~*.*
+~.*
+~*
+
+certs/**
+vhosts/**
+
+!certs/.gitkeep
+!vhosts/.gitkeep
