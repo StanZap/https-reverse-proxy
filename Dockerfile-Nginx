@@ -1,0 +1,10 @@
+FROM nginx:1
+
+RUN apt-get update; \
+    bash; \
+    apt-get -f install;
+
+RUN apt-get install -y wget; \
+    wget https://dl.eff.org/certbot-auto; \
+    chmod a+x ./certbot-auto; \
+    mv ./certbot-auto /bin/certbot

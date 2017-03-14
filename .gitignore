@@ -3,9 +3,9 @@
 ~*.*
 ~.*
 ~*
-certs/**
-conf.d/**
-vhost.d/**
+certs/
+conf.d/
+vhost.d/
 
 !certs/.gitkeep
 !vhost.d/.gitkeep

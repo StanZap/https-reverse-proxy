@@ -1,0 +1,20 @@
+version: "2"
+services: 
+  nginx:
+    image: jwilder/nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./vhost.d:/etc/nginx/vhost.d
+      # - ./conf.d:/etc/nginx/conf.d
+      # - ./certs:/etc/nginx/certs:ro
+      # - /usr/share/nginx/html
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - proxy_net
+
+networks:
+  proxy_net:
+    driver: bridge
+
